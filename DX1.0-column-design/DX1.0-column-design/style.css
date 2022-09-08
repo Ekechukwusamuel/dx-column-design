@@ -1,0 +1,223 @@
+/* Box- model */
+/* Flexbox */
+
+/* universal selector */
+* {
+    margin: 0;
+    /* this Box-sizing makes it easier to maintain the same with or height if given */
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+.parent-div {
+    /* border: 3px solid black; */
+    display: flex;
+    /* flex-direction: column; */
+
+    /* this is added by default */
+    flex-direction: row;
+}
+
+.left-div {
+    padding: 20px;
+    background: #d9d9d9;
+    height: 400px;
+    width: 50%;
+    /* margin-left: 20px; */
+    /* padding-left: 30px; */
+    /* top right bottom left ---clockwise direction */
+    /* padding: 30px 30px 30px 30px; */
+}
+
+.right-div {
+    /* background: #ff6347; */
+    background: url(./images/image1.jpg);
+    background-size: cover;
+    background-position: bottom left;
+    height: 400px;
+    width: 50%;
+    position: relative;
+    display: flex;
+}
+
+.smart-line {
+    background: #FF6347;
+    height: 16px;
+    width: 224px;
+}
+
+span {
+    color: tomato;
+}
+
+.header-logotext {
+    margin-bottom: 20px;
+}
+
+.header-headingtext {
+    margin-bottom: 20px;
+}
+
+.header-longtext {
+    margin-bottom: 35px;
+}
+
+.link-holder {
+    /* border: 3px solid black; */
+    display: flex;
+    justify-content: space-evenly;
+    color: white;
+    /* top and bottom ---- left and right */
+    padding: 20px 0;
+    width: 100%;
+    z-index: 3;
+}
+
+/* background overlay */
+.bg-overlay {
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 99, 71, 0.2);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* positioning ---Relative position [absolute] */
+
+/* Second section */
+.second-section {
+    /* margin-top: 40px; */
+    /* border: 3px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+}
+
+.secondsection-left {
+    width: 350px;
+    height: 360px;
+    background: #D9D9D9;
+    padding: 40px 25px;
+    text-align: center;
+}
+
+.secondsection-right {
+    margin-left: 10px;
+    width: 380px;
+    height: 420px;
+    background: tomato;
+}
+
+/* 
+h4 {
+    text-align: center;
+} */
+
+p {
+    margin: 10px 0;
+    text-align: left;
+}
+
+/* image reset */
+img {
+    width: 100%;
+    height: 100%;
+}
+
+/* Third section */
+.thirdsection {
+    background: #D9D9D9;
+    /* border: 3px solid black; */
+    display: flex;
+    justify-content: center;
+    padding: 50px 0;
+}
+
+.thirdsection-left,
+.thirdsection-right {
+    width: 400px;
+    height: 420px;
+}
+
+.thirdsection-left {
+    background: skyblue;
+}
+
+.thirdsection-right {
+    background: #FF6347;
+    padding: 30px 25px;
+
+}
+
+/* footer section */
+.footer {
+    background: #FF6347;
+    padding: 20px 0;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.iconholder {
+    color: white;
+    /* font-size: 40px; */
+}
+
+.icon-method2 {
+    border: 3px solid black;
+    width: 200px;
+}
+@media screen and (max-width:900px){
+    .right-div,
+    .left-div{
+        height: 530px;
+    }
+    .left-div{
+        width: 60%;
+    }
+    .right-div{
+        width: 40%;
+    }
+    .header-heading{
+        font-size: 30px;
+    }
+    p{
+        font-size: 16px;
+    }
+    .smart-line{
+        width: 200px;
+    }
+    .link-holder{
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 25px;
+        padding-left: 40px;
+    }
+    .link-holder h4{
+        margin-bottom: 20px;
+    }
+    .second-section{
+        flex-direction: column;
+    }
+    .secondsection-right{
+        margin-left: 0;
+        margin-top: 30px;
+    }
+    .thirdsection{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .thirdsection-left{
+        margin-bottom: 30px;
+    }
+    .footer{
+        flex-direction: column;
+        align-items: center;
+    }
+}
